@@ -1,0 +1,24 @@
+/* =====================
+   CTA
+===================== */
+.cta {
+  background: #2f80ed;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.cta button {
+  margin-top: 24px;
+  padding: 14px 32px;
+  border-radius: 10px;
+  border: none;
+  background: #fff;
+  color: #2f80ed;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cta button:hover {
+  transform: scale(1.06);
+}

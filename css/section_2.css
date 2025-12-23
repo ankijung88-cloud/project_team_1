@@ -1,0 +1,36 @@
+/* =====================
+   SECTION 2 : 미리보기 카드 3개
+===================== */
+.preview-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.preview-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.preview-img {
+  height: 140px;
+  margin-bottom: 16px;
+}
+
+.preview-img canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.preview-title {
+  font-size: 16px;
+  font-weight: 600;
+}

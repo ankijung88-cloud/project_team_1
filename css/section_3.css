@@ -1,0 +1,72 @@
+/* 섹션 전체 */
+.comfort-section {
+  padding: 120px 40px;
+  background: #f9fafb;
+}
+
+/* 좌우 레이아웃 */
+.comfort-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* 왼쪽 영상 */
+.comfort-video {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.comfort-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 오른쪽 텍스트 */
+.comfort-text h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.comfort-text .intro {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* 결과창 */
+.comfort-result {
+  margin-top: 32px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.comfort-result h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.comfort-result p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #111827;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .comfort-container {
+    grid-template-columns: 1fr;
+  }
+}

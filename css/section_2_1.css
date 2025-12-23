@@ -1,0 +1,36 @@
+/* 섹션 전체 */
+.video-section {
+  padding: 120px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+/* 제목 */
+.video-section-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.video-section-subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 48px;
+}
+
+/* 중앙 영상 박스 */
+.video-box {
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* 영상 */
+.video-box video {
+  width: 100%;
+  height: auto;
+  display: block;
+}

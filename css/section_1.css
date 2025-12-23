@@ -1,0 +1,50 @@
+/* =====================
+   SECTION 1 : 데이터 예측
+===================== */
+.data-section {
+  padding: 120px 0;
+  background: #f9fafb;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* 왼쪽 텍스트 */
+.data-text .section-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.data-text .section-desc {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* 오른쪽 영상 박스 */
+.data-video {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.data-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .data-video {
+    margin-top: 32px;
+  }
+}
