@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>회원가입</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: system-ui;
+      }
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .signup-box {
+        width: 100%;
+        max-width: 340px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      h3 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      input {
+        height: 44px;
+        padding: 0 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+      .signup-btn {
+        height: 46px;
+        background: #16a34a;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .back-btn {
+        background: none;
+        border: none;
+        color: #2563eb;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="signup-box" onsubmit="submitSignup(event)">
+      <h3>회원가입</h3>
+
+      <input type="text" id="userId" placeholder="아이디" required />
+      <input type="password" id="password" placeholder="비밀번호" required />
+      <input
+        type="password"
+        id="passwordConfirm"
+        placeholder="비밀번호 확인"
+        required
+      />
+      <input type="text" id="name" placeholder="이름" required />
+      <input type="email" id="email" placeholder="이메일" required />
+
+      <button class="signup-btn" type="submit">회원가입</button>
+      <button type="button" class="back-btn" onclick="goLogin()">
+        로그인으로 돌아가기
+      </button>
+    </form>
+
+    <script>
+      function goLogin() {
+        window.location.href = "login.html";
+      }
+
+      function submitSignup(e) {
+        e.preventDefault();
+
+        const pw = password.value;
+        const pwConfirm = passwordConfirm.value;
+
+        if (pw !== pwConfirm) {
+          alert("비밀번호가 일치하지 않습니다.");
+          return;
+        }
+
+        // 👉 실제 서비스에서는 여기서 API 호출
+        alert("회원가입 완료! 로그인 페이지로 이동합니다.");
+
+        window.location.href = "login.html";
+      }
+    </script>
+  </body>
+</html>

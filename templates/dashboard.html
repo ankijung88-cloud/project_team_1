@@ -3,46 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <title>의사결정 대시보드</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #f9fafb;
-        margin: 0;
-        position: relative;
-      }
-
-      h1 {
-        font-size: 32px;
-        color: #111827;
-      }
-
-      .back-btn {
-        position: fixed;
-        right: 24px;
-        bottom: 24px;
-        padding: 12px 20px;
-        background: #2563eb;
-        color: #fff;
-        border: none;
-        border-radius: 999px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s ease, transform 0.2s ease;
-      }
-
-      .back-btn:hover {
-        background: #1e40af;
-        transform: scale(1.05);
-      }
-    </style>
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <script src="../js/dashboard.js" defer></script>
   </head>
   <body>
-    <h1>의사결정 대시보드</h1>
+    <!-- 메인 컨테이너 -->
+    <div class="container">
+      <!-- KPI 카드 영역 -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span>오늘 매출</span>
+            <div class="icon blue">₩</div>
+          </div>
+          <p class="kpi-value" id="todaySales">0원</p>
+          <div class="kpi-change">▲ +12.5% 어제 대비</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span>피크타임</span>
+            <div class="icon purple">⏰</div>
+          </div>
+          <p class="kpi-value">12:00 - 13:00</p>
+          <p class="kpi-desc">점심시간대 최고 혼잡</p>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span>현재 날씨</span>
+            <div class="icon orange">☁</div>
+          </div>
+          <p class="kpi-value">흐림 18°C</p>
+          <p class="kpi-desc">배달 주문 증가 예상</p>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span>이번 주 평균</span>
+            <div class="icon green">📊</div>
+          </div>
+          <p class="kpi-value">945,000원</p>
+          <p class="kpi-desc">일평균 매출액</p>
+        </div>
+      </div>
+
+      <!-- AI 인사이트 -->
+      <div class="ai-box">
+        <div class="ai-icon">✨</div>
+        <div>
+          <h3>AI 인사이트</h3>
+          <p>
+            오늘 흐린 날씨로 인해 배달 주문이 평소보다 35% 증가했습니다. 홀
+            손님은 감소했지만 전체 매출은 목표치를 초과 달성했습니다.
+          </p>
+          <div class="ai-tags">
+            <span>배달 증가</span>
+            <span>매출 목표 달성</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 주간 매출 트렌드 -->
+      <div class="trend-box">
+        <div class="trend-header">
+          <h3>주간 매출 트렌드</h3>
+          <button>상세보기 →</button>
+        </div>
+        <div id="trendList"></div>
+      </div>
+    </div>
     <button
       class="back-btn"
       onclick="window.location.href='../index.html#section_4'"

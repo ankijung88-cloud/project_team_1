@@ -2,51 +2,96 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>예측</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #f9fafb;
-        margin: 0;
-        position: relative;
-      }
-
-      h1 {
-        font-size: 32px;
-        color: #111827;
-      }
-
-      .back-btn {
-        position: fixed;
-        right: 24px;
-        bottom: 24px;
-        padding: 12px 20px;
-        background: #2563eb;
-        color: #fff;
-        border: none;
-        border-radius: 999px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s ease, transform 0.2s ease;
-      }
-
-      .back-btn:hover {
-        background: #1e40af;
-        transform: scale(1.05);
-      }
-    </style>
+    <title>내일 예측 리포트</title>
+    <link rel="stylesheet" href="../css/forecast.css" />
+    <script src="../js/forecast.js" defer></script>
   </head>
   <body>
-    <h1>예측</h1>
-    <button
-      class="back-btn"
-      onclick="window.location.href='../index.html#section_4'"
-    >
+    <div class="container">
+      <!-- 🔮 내일 예측 리포트 헤더 -->
+      <div class="forecast-header">
+        <div class="header-top">
+          <div class="header-icon">📅</div>
+          <div>
+            <h2>내일 예측 리포트</h2>
+            <p>AI가 분석한 내일의 영업 전망</p>
+          </div>
+        </div>
+
+        <div class="forecast-cards">
+          <div class="forecast-card">
+            <span class="card-label">☔ 예상 날씨</span>
+            <p class="card-main">비</p>
+            <p class="card-sub">강수확률 80%, 배달 주문 증가</p>
+          </div>
+
+          <div class="forecast-card">
+            <span class="card-label">🏆 근처 이벤트</span>
+            <p class="card-main small">초등학교 운동회</p>
+            <p class="card-sub">학부모 수요 증가 예상</p>
+          </div>
+
+          <div class="forecast-card">
+            <span class="card-label">📈 예상 매출</span>
+            <p class="card-main" id="predictedSales">0원</p>
+            <p class="card-up">▲ +41% 예상</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✨ AI 추천 운영 전략 -->
+      <div class="strategy-box">
+        <div class="section-header">
+          <div class="section-icon">✨</div>
+          <div>
+            <h3>AI 추천 운영 전략</h3>
+            <p>데이터 기반 최적화 제안</p>
+          </div>
+        </div>
+
+        <div class="strategy-grid">
+          <div class="strategy-card purple">
+            <div class="icon">📦</div>
+            <h4>재료 준비</h4>
+            <p>평소 대비 <strong>1.2배</strong> 준비 권장</p>
+            <ul>
+              <li>김치찌개 재료 +30%</li>
+              <li>된장찌개 재료 +25%</li>
+              <li>배달 용기 여유분 확보</li>
+            </ul>
+          </div>
+
+          <div class="strategy-card pink">
+            <div class="icon">👥</div>
+            <h4>인력 배치</h4>
+            <p>피크타임 <strong>알바 1명 추가</strong></p>
+            <ul>
+              <li>11:30 ~ 14:00</li>
+              <li>17:30 ~ 20:00</li>
+              <li>예상 인건비 45,000원</li>
+            </ul>
+          </div>
+
+          <div class="strategy-card blue">
+            <div class="icon">🚀</div>
+            <h4>마케팅</h4>
+            <p>비오는 날 쿠폰 <strong>+15~20%</strong></p>
+            <ul>
+              <li>배달앱 할인 이벤트</li>
+              <li>우천 특별 메뉴 홍보</li>
+              <li>SNS 날씨 콘텐츠</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ⏰ 시간대별 혼잡도 -->
+      <div class="crowd-box">
+        <h3>시간대별 혼잡도 예측</h3>
+        <div id="crowdList"></div>
+      </div>
+    </div>
+    <button class="back-btn" onclick="window.location.href='../index.html'">
       되돌아가기
     </button>
   </body>

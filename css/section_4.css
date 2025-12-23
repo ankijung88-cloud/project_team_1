@@ -12,9 +12,10 @@
 }
 
 .feature-card {
+  position: relative;
   background: #ffffff;
   border-radius: 16px;
-  padding: 24px;
+  padding: 50px;
   text-align: center;
   font-weight: 600;
   font-size: 16px;
@@ -24,15 +25,60 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* 아이콘 영역 크기 */
 .feature-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: #eef3ff;
-  margin-bottom: 12px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 48px; /* 아이콘 영역 가로 */
+  height: 48px; /* 아이콘 영역 세로 */
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 이미지 크기 자동 조정 */
+.feature-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* 비율 유지 */
 }
 
 .feature-card:hover {
   transform: translateY(-8px); /* 살짝 떠오르는 효과 */
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.feature-title {
+  margin-left: 60px; /* 설명과 기준선 통일 */
+  text-align: left;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.feature-desc {
+  margin-top: 8px; /* 제목 아래 간격 */
+  margin-left: 60px; /* 왼쪽 기준 60px 들여쓰기 */
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.5;
+  text-align: left; /* 줄바꿈 시 왼쪽 정렬 */
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    padding-left: 56px;
+  }
+
+  .feature-icon {
+    width: 32px;
+    height: 32px;
+    top: 12px;
+    left: 12px;
+  }
 }

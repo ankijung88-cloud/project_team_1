@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>로그인</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+      }
+
+      .login-box {
+        width: 100%;
+        max-width: 320px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      h3 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      input {
+        height: 44px;
+        padding: 0 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+
+      .login-submit {
+        height: 46px;
+        border: none;
+        border-radius: 8px;
+        background: #2563eb;
+        color: #fff;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .login-links {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .text-btn {
+        background: none;
+        border: none;
+        font-size: 13px;
+        color: #555;
+        cursor: pointer;
+      }
+
+      .signup-link {
+        margin-top: 10px;
+        background: none;
+        border: none;
+        font-size: 14px;
+        color: #2563eb;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-box">
+      <h3>로그인</h3>
+
+      <input type="text" placeholder="아이디" />
+      <input type="password" placeholder="비밀번호" />
+
+      <button class="login-submit">로그인</button>
+
+      <div class="login-links">
+        <button class="text-btn">아이디 찾기</button>
+        <button class="text-btn">비밀번호 찾기</button>
+      </div>
+
+      <button class="signup-link" onclick="goSignup()">회원가입</button>
+    </div>
+    <script>
+      function goSignup() {
+        window.location.href = "signup.html";
+      }
+    </script>
+  </body>
+</html>

@@ -2,47 +2,80 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>감성 케어</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #f9fafb;
-        margin: 0;
-        position: relative;
-      }
-
-      h1 {
-        font-size: 32px;
-        color: #111827;
-      }
-
-      .back-btn {
-        position: fixed;
-        right: 24px;
-        bottom: 24px;
-        padding: 12px 20px;
-        background: #2563eb;
-        color: #fff;
-        border: none;
-        border-radius: 999px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s ease, transform 0.2s ease;
-      }
-
-      .back-btn:hover {
-        background: #1e40af;
-        transform: scale(1.05);
-      }
-    </style>
+    <title>감정 케어</title>
+    <link rel="stylesheet" href="../css/emotional.css" />
+    <script src="../js/emotional.js" defer></script>
   </head>
   <body>
-    <h1>감성 케어</h1>
+    <div class="container">
+      <!-- 😊 기분 체크 -->
+      <div class="card">
+        <div class="center">
+          <h2>오늘 하루 어떠셨나요?</h2>
+          <p class="sub">
+            사장님의 마음 상태를 알려주시면, 맞춤형 케어를 제공해드립니다
+          </p>
+        </div>
+
+        <div class="mood-grid">
+          <button class="mood-btn" data-mood="good">
+            😊<span>좋아요</span>
+          </button>
+          <button class="mood-btn" data-mood="normal">
+            😐<span>그저그래요</span>
+          </button>
+          <button class="mood-btn" data-mood="tired">
+            😰<span>힘들어요</span>
+          </button>
+          <button class="mood-btn" data-mood="exhausted">
+            😢<span>지쳐요</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 💜 감정 피드백 -->
+      <div id="feedback" class="feedback hidden">
+        <div class="feedback-header">
+          <div class="heart">💜</div>
+          <h2>사장님을 위한 메시지</h2>
+        </div>
+        <div id="feedbackContent"></div>
+      </div>
+
+      <!-- ☕ 휴식 제안 -->
+      <div class="card">
+        <div class="section-header">
+          <div class="icon orange">☕</div>
+          <div>
+            <h3>오늘의 휴식 제안</h3>
+            <p class="sub">잠깐의 휴식이 내일의 활력을 만듭니다</p>
+          </div>
+        </div>
+
+        <div class="rest-grid">
+          <div class="rest-card">
+            ☕
+            <h4>카페 휴식</h4>
+            <p>조용한 카페에서 20분 휴식</p>
+          </div>
+          <div class="rest-card">
+            🚶‍♂️
+            <h4>가벼운 산책</h4>
+            <p>가게 주변을 천천히 걷기</p>
+          </div>
+          <div class="rest-card">
+            🎵
+            <h4>음악 감상</h4>
+            <p>좋아하는 노래 3곡 듣기</p>
+          </div>
+          <div class="rest-card">
+            🧘‍♀️
+            <h4>스트레칭</h4>
+            <p>목·어깨·허리 스트레칭</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <button
       class="back-btn"
       onclick="window.location.href='../index.html#section_4'"

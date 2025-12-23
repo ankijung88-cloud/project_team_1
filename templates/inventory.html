@@ -2,51 +2,59 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>매출</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #f9fafb;
-        margin: 0;
-        position: relative;
-      }
-
-      h1 {
-        font-size: 32px;
-        color: #111827;
-      }
-
-      .back-btn {
-        position: fixed;
-        right: 24px;
-        bottom: 24px;
-        padding: 12px 20px;
-        background: #2563eb;
-        color: #fff;
-        border: none;
-        border-radius: 999px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s ease, transform 0.2s ease;
-      }
-
-      .back-btn:hover {
-        background: #1e40af;
-        transform: scale(1.05);
-      }
-    </style>
+    <title>재고 & 인력 현황</title>
+    <link rel="stylesheet" href="../css/inventory.css" />
+    <script src="../js/inventory.js" defer></script>
   </head>
   <body>
-    <h1>매출</h1>
-    <button
-      class="back-btn"
-      onclick="window.location.href='../index.html#section_4'"
-    >
+    <div class="container">
+      <!-- 재고 & 인력 현황 카드 -->
+      <div class="inventory-card">
+        <div class="card-header">
+          <h3>재고 & 인력 현황</h3>
+          <button class="manage-btn">관리하기 →</button>
+        </div>
+
+        <div class="status-list">
+          <!-- 주 재료 -->
+          <div class="status-item green">
+            <div class="status-left">
+              <div class="icon-box green">📦</div>
+              <div>
+                <p class="status-title">주 재료</p>
+                <p class="status-desc">양파, 대파, 고기류</p>
+              </div>
+            </div>
+            <span class="badge green">충분</span>
+          </div>
+
+          <!-- 부 재료 -->
+          <div class="status-item yellow">
+            <div class="status-left">
+              <div class="icon-box yellow">📦</div>
+              <div>
+                <p class="status-title">부 재료</p>
+                <p class="status-desc">마늘, 생강, 고춧가루</p>
+              </div>
+            </div>
+            <span class="badge yellow">보통</span>
+          </div>
+
+          <!-- 근무 인력 -->
+          <div class="status-item blue">
+            <div class="status-left">
+              <div class="icon-box blue">👥</div>
+              <div>
+                <p class="status-title">근무 인력</p>
+                <p class="status-desc">정직원 2명 + 알바 1명</p>
+              </div>
+            </div>
+            <span class="badge blue">적정</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="back-btn" onclick="window.location.href='../index.html'">
       되돌아가기
     </button>
   </body>

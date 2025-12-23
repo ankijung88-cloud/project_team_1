@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f9fafb;
+  font-family: system-ui, sans-serif;
+  color: #111827;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 32px;
+  margin-bottom: 32px;
+  border: 1px solid #e5e7eb;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.sub {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.mood-btn {
+  padding: 20px;
+  border-radius: 16px;
+  border: 2px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 28px;
+}
+
+.mood-btn span {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.mood-btn.active {
+  border-color: #6366f1;
+  background: #eef2ff;
+  transform: scale(1.05);
+}
+
+.feedback {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.hidden {
+  display: none;
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.heart {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-box {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.warning {
+  background: rgba(239, 68, 68, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.section-header {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.icon.orange {
+  width: 48px;
+  height: 48px;
+  background: #ffedd5;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.rest-card {
+  background: linear-gradient(135deg, #fff7ed, #fef3c7);
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid #fed7aa;
+}
+
+.rest-card h4 {
+  margin: 8px 0 4px;
+}
+
+.back-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  padding: 12px 20px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #1e40af;
+  transform: scale(1.05);
+}
