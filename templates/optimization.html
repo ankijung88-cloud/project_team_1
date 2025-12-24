@@ -2,47 +2,49 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>운영 최적화</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #f9fafb;
-        margin: 0;
-        position: relative;
-      }
-
-      h1 {
-        font-size: 32px;
-        color: #111827;
-      }
-
-      .back-btn {
-        position: fixed;
-        right: 24px;
-        bottom: 24px;
-        padding: 12px 20px;
-        background: #2563eb;
-        color: #fff;
-        border: none;
-        border-radius: 999px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s ease, transform 0.2s ease;
-      }
-
-      .back-btn:hover {
-        background: #1e40af;
-        transform: scale(1.05);
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>운영 전략 제안</title>
+    <link rel="stylesheet" href="../css/optimization.css" />
+    <script src="../js/optimization.js" defer></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-    <h1>운영 최적화</h1>
+    <div class="container">
+      <h1>운영 데이터 기반 전략 대시보드</h1>
+
+      <div class="flex-container">
+        <div class="data-inputs">
+          <h2>데이터 입력</h2>
+          <label
+            >인력 수: <input type="number" id="staff" placeholder="예: 10"
+          /></label>
+          <label
+            >재고량: <input type="number" id="inventory" placeholder="예: 500"
+          /></label>
+          <label
+            >하루 예상 주문 수:
+            <input type="number" id="orders" placeholder="예: 100"
+          /></label>
+          <button id="generateBtn">전략 제안 받기</button>
+        </div>
+
+        <div class="data-display">
+          <h2>입력 데이터</h2>
+          <div id="inputData">아직 입력된 데이터가 없습니다.</div>
+        </div>
+      </div>
+
+      <div class="charts">
+        <h2>데이터 시각화</h2>
+        <canvas id="dataChart"></canvas>
+      </div>
+
+      <div class="strategy-display">
+        <h2>제안된 운영 전략</h2>
+        <div id="strategy">아직 전략이 제안되지 않았습니다.</div>
+      </div>
+    </div>
     <button
       class="back-btn"
       onclick="window.location.href='../index.html#section_4'"

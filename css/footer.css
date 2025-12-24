@@ -1,9 +1,146 @@
-/* =====================
-   FOOTER
-===================== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 footer {
-  background: #e5e5e5;
-  padding: 40px 0;
-  font-size: 13px;
-  color: #666;
+  background-color: #69696b; /* bg-gray-900 */
+  color: #d1d5db; /* text-gray-300 */
+  margin-top: 80px; /* mt-20 */
+  padding: 48px 16px; /* py-12 px-4 */
+}
+
+.container {
+  max-width: 1280px; /* max-w-7xl */
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 32px; /* gap-8 */
+  grid-template-columns: 1fr;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 푸터 로고 컨테이너 */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap; /* 작은 화면에서 줄 바꿈 허용 */
+}
+
+/* 로고 이미지 */
+.footer-logo img {
+  max-width: 40px; /* 최대 너비 제한 */
+  width: 100%; /* 컨테이너 안에서 자동 조절 */
+  height: auto; /* 비율 유지 */
+  display: inline-block;
+}
+
+/* 로고 텍스트 */
+.footer-logo span {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footer-logo p {
+  font-size: 0.875rem;
+  color: #9ca3af; /* text-gray-400 */
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 모바일 대응: 화면 폭이 480px 이하일 때 */
+@media (max-width: 480px) {
+  .footer-logo {
+    flex-direction: column; /* 이미지와 텍스트 수직 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    gap: 4px;
+  }
+
+  .footer-logo span {
+    font-size: 1.1rem;
+  }
+
+  .footer-logo p {
+    font-size: 0.75rem;
+  }
+
+  .footer-logo img {
+    max-width: 32px; /* 작은 화면에 맞게 이미지 축소 */
+  }
+}
+
+h4 {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-bottom: 8px; /* space-y-2 */
+  font-size: 0.875rem; /* text-sm */
+}
+
+ul li a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1f2937; /* border-gray-800 */
+  padding-top: 32px; /* pt-8 */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* gap-4 */
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+  }
+}
+
+.footer-bottom p {
+  font-size: 0.875rem;
+  color: #6b7280; /* text-gray-500 */
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  font-size: 0.875rem;
+}
+
+.footer-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #fff;
 }

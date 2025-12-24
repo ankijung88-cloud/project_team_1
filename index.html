@@ -16,11 +16,14 @@
     <link rel="stylesheet" href="./css/section_2_1.css" />
     <link rel="stylesheet" href="./css/scrollControls.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    
 
     <script src="./js/header-scroll.js" defer></script>
     <script src="./js/weather.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/comfort.js"></script>
+    
 
     <style>
       /* =====================
@@ -40,7 +43,7 @@
   <body>
     <header class="head-container">
       <div class="logo">
-        <img src="images/logo.png" alt="AI Partner 로고" />
+        <img src="./images/logo.png" alt="AI Partner 로고" />
       </div>
       <!-- 헤더 버튼 -->
       <div class="header-btns" id="headerBtns">
@@ -56,13 +59,6 @@
         <button
           class="side-btn"
           onclick="window.location.href='./templates/dashboard.html'"
-        >
-          대시보드
-        </button>
-
-        <button
-          class="side-btn"
-          onclick="window.location.href='./templates/sales.html'"
         >
           매출
         </button>
@@ -115,8 +111,8 @@
 
         <div class="result-box">
           <h4>예측 결과</h4>
-          <p>내일 예상 매출은 <strong>○○○○원</strong> 입니다.</p>
-          <p>재고 보충이 필요한 품목이 있습니다.</p>
+            <p>내일 예상 매출은 <strong>○○○○원</strong> 입니다.</p>
+            <p>재고 보충이 필요한 품목이 있습니다.</p>
           <!-- ✅ 결과창 내부 오른쪽 버튼 -->
           <button
             class="result-inventory-btn"
@@ -125,6 +121,7 @@
             재고 현황
           </button>
         </div>
+      </div>
       </div>
       <!-- 배경 영상 -->
       <video class="hero-video" autoplay muted loop playsinline>
@@ -145,7 +142,7 @@
         <!-- 오른쪽 영상 박스 -->
         <div class="data-video">
           <video autoplay muted loop playsinline>
-            <source src="./videos/hero-bg02.mp4" type="video/mp4" />
+            <source src="./videos/serviceGuide.mp4" type="video/mp4" />
             브라우저가 영상을 지원하지 않습니다.
           </video>
         </div>
@@ -192,7 +189,7 @@
       <!-- 중앙 영상 박스 -->
       <div class="video-box">
         <video autoplay muted loop playsinline>
-          <source src="./videos/hero-bg01.mp4" type="video/mp4" />
+          <source src="./videos/video-04.mp4" type="video/mp4" />
           브라우저가 영상을 지원하지 않습니다.
         </video>
       </div>
@@ -305,16 +302,6 @@
         </div>
       </div>
     </section>
-    <!-- 위로가기 버튼 -->
-    <div class="scroll-controls">
-      <button id="scrollTopBtn" aria-label="위로가기">▲</button>
-      <button id="scrollDownBtn" aria-label="내려가기">▼</button>
-    </div>
-    <script>
-      function openFeaturePage(url) {
-        window.open(url, "_blank"); // 새 탭으로 열기
-      }
-    </script>
 
     <!-- CTA -->
     <section class="cta">
@@ -326,9 +313,71 @@
     </section>
 
     <footer>
-      <div class="container">© 2025 AI Partner</div>
+      <div class="container">
+        <div class="grid">
+          <div>
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <img src="./images/logo.png" alt="AI Partner 로고" />
+              </div>
+              <span>FORKAST</span>
+            </div>
+            <p>
+              소상공인의 성공을 위한<br />
+              AI 경영 파트너
+            </p>
+          </div>
+
+          <div>
+            <h4>서비스</h4>
+            <ul>
+              <li><a href="#">서비스 소개</a></li>
+              <li><a href="#">요금제</a></li>
+              <li><a href="#">고객사례</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>고객지원</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">이용가이드</a></li>
+              <li><a href="#">문의하기</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>문의</h4>
+            <ul>
+              <li>📞 1588-0000</li>
+              <li>📧 support@forkast.com</li>
+              <li>🕐 평일 09:00-18:00</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 FORKAST RESTAURANT ANALYTICS. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">사업자정보</a>
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- ✅ 여기! body 끝부분 -->
+    <!-- 위로가기 버튼 -->
+    <div class="scroll-controls">
+      <button id="scrollTopBtn" aria-label="위로가기">▲</button>
+      <button id="scrollDownBtn" aria-label="내려가기">▼</button>
+    </div>
+    <script>
+      function openFeaturePage(url) {
+        window.open(url, "_blank"); // 새 탭으로 열기
+      }
+    </script>
+
     <script>
       const miniOptions = {
         responsive: true,

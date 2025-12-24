@@ -2,47 +2,35 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI 상담</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #f9fafb;
-        margin: 0;
-        position: relative;
-      }
-
-      h1 {
-        font-size: 32px;
-        color: #111827;
-      }
-
-      .back-btn {
-        position: fixed;
-        right: 24px;
-        bottom: 24px;
-        padding: 12px 20px;
-        background: #2563eb;
-        color: #fff;
-        border: none;
-        border-radius: 999px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s ease, transform 0.2s ease;
-      }
-
-      .back-btn:hover {
-        background: #1e40af;
-        transform: scale(1.05);
-      }
-    </style>
+    <link rel="stylesheet" href="../css/ai-consult.css" />
+    <script src="../js/ai-consult.js" defer></script>
   </head>
   <body>
-    <h1>AI 상담</h1>
+    <div class="container">
+      <h1>AI 상담 챗봇</h1>
+
+      <!-- 대화창 -->
+      <div class="chat-window" id="chatWindow">
+        <!-- 대화 내용이 JS에서 추가됨 -->
+      </div>
+
+      <!-- 입력창 -->
+      <div class="chat-input">
+        <textarea id="userInput" placeholder="질문을 입력하세요..."></textarea>
+        <button id="sendBtn">전송</button>
+      </div>
+
+      <!-- 항상 응원 메시지 -->
+      <div class="encouragement">
+        💡 오늘도 최선을 다하세요! 당신을 응원합니다! 💪
+      </div>
+
+      <!-- 상담 기록 다운로드 버튼 -->
+      <button id="downloadBtn" class="download-btn">상담 기록 다운로드</button>
+    </div>
+
     <button
       class="back-btn"
       onclick="window.location.href='../index.html#section_4'"

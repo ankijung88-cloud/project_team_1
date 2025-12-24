@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9fafb;
+  padding: 20px;
+}
+
+.community-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.community-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle svg {
+  width: 24px;
+  height: 24px;
+  color: #2563eb;
+}
+
+.community-header h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #111827;
+  margin: 0;
+}
+
+.community-header p {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin: 2px 0 0 0;
+}
+
+.post-list {
+  margin-bottom: 16px;
+}
+
+.post {
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 12px;
+  background-color: #f3f4f6;
+}
+
+.post:hover {
+  background-color: #e5e7eb;
+}
+
+.post.highlight {
+  background: linear-gradient(to right, #e0e7ff, #ede9fe);
+  border: 1px solid #c7d2fe;
+}
+
+.post.highlight:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.post-time {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-left: 12px;
+  white-space: nowrap;
+}
+
+.post-comments {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.post-comments svg {
+  width: 16px;
+  height: 16px;
+  color: #9ca3af;
+}
+
+.community-button {
+  width: 100%;
+  padding: 12px 0;
+  background: linear-gradient(to right, #4f46e5, #8b5cf6);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.community-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  padding: 12px 20px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #1e40af;
+  transform: scale(1.05);
+}

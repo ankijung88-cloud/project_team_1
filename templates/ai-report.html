@@ -2,47 +2,36 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>AI 매출 리포트</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #f9fafb;
-        margin: 0;
-        position: relative;
-      }
-
-      h1 {
-        font-size: 32px;
-        color: #111827;
-      }
-
-      .back-btn {
-        position: fixed;
-        right: 24px;
-        bottom: 24px;
-        padding: 12px 20px;
-        background: #2563eb;
-        color: #fff;
-        border: none;
-        border-radius: 999px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s ease, transform 0.2s ease;
-      }
-
-      .back-btn:hover {
-        background: #1e40af;
-        transform: scale(1.05);
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>매출 분석 대시보드</title>
+    <link rel="stylesheet" href="../css/ai-report.css" />
+    <script src="../js/ai-report.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-    <h1>AI 매출 리포트 페이지</h1>
+    <div class="container">
+      <h1>최근 30일 매출 분석</h1>
+
+      <!-- 일자별 매출 선형 그래프 -->
+      <div class="chart-container">
+        <canvas id="lineChart"></canvas>
+      </div>
+
+      <!-- 주별 평균 가로 막대그래프 -->
+      <div class="chart-container">
+        <canvas id="barChart"></canvas>
+      </div>
+
+      <!-- AI 분석 결과 -->
+      <div class="ai-result" id="aiResult">
+        AI 분석 결과가 여기에 표시됩니다...
+      </div>
+
+      <!-- 응원 메시지 -->
+      <div class="encouragement">
+        💡 오늘도 최선을 다하세요! 매출 상승과 운영 최적화를 응원합니다! 💪
+      </div>
+    </div>
     <button
       class="back-btn"
       onclick="window.location.href='../index.html#section_4'"

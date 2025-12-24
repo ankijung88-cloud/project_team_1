@@ -2,47 +2,41 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>커뮤니티</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #f9fafb;
-        margin: 0;
-        position: relative;
-      }
-
-      h1 {
-        font-size: 32px;
-        color: #111827;
-      }
-
-      .back-btn {
-        position: fixed;
-        right: 24px;
-        bottom: 24px;
-        padding: 12px 20px;
-        background: #2563eb;
-        color: #fff;
-        border: none;
-        border-radius: 999px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s ease, transform 0.2s ease;
-      }
-
-      .back-btn:hover {
-        background: #1e40af;
-        transform: scale(1.05);
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사장님 커뮤니티</title>
+    <link rel="stylesheet" href="../css/community.css" />
+    <script src="../js/community.js" defer></script>
   </head>
   <body>
-    <h1>커뮤니티</h1>
+    <div class="community-card">
+      <div class="community-header">
+        <div class="icon-circle">
+          <!-- MessageCircle SVG 아이콘 -->
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.97-4.03 9-9 9a9 9 0 01-9-9c0-4.97 4.03-9 9-9s9 4.03 9 9z"
+            />
+          </svg>
+        </div>
+        <div>
+          <h3>사장님 커뮤니티</h3>
+          <p>같은 고민을 하는 사장님들과 소통하세요</p>
+        </div>
+      </div>
+
+      <div class="post-list" id="post-list">
+        <!-- 게시글이 JS로 삽입됩니다 -->
+      </div>
+
+      <button class="community-button">익명으로 고민 나누기</button>
+    </div>
     <button
       class="back-btn"
       onclick="window.location.href='../index.html#section_4'"

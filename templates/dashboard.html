@@ -9,30 +9,30 @@
   <body>
     <!-- 메인 컨테이너 -->
     <div class="container">
-      <!-- KPI 카드 영역 -->
+      <!-- KPI 카드 4개 -->
       <div class="kpi-grid">
         <div class="kpi-card">
           <div class="kpi-header">
             <span>오늘 매출</span>
-            <div class="icon blue">₩</div>
+            <div class="kpi-icon blue">💰</div>
           </div>
-          <p class="kpi-value" id="todaySales">0원</p>
-          <div class="kpi-change">▲ +12.5% 어제 대비</div>
+          <p class="kpi-value" id="todaySales">1,200,000원</p>
+          <div class="kpi-trend">▲ <span>+12.5%</span> 어제 대비</div>
         </div>
 
         <div class="kpi-card">
           <div class="kpi-header">
             <span>피크타임</span>
-            <div class="icon purple">⏰</div>
+            <div class="kpi-icon purple">⏰</div>
           </div>
-          <p class="kpi-value">12:00 - 13:00</p>
+          <p class="kpi-value">12:00-13:00</p>
           <p class="kpi-desc">점심시간대 최고 혼잡</p>
         </div>
 
         <div class="kpi-card">
           <div class="kpi-header">
             <span>현재 날씨</span>
-            <div class="icon orange">☁</div>
+            <div class="kpi-icon orange">☁️</div>
           </div>
           <p class="kpi-value">흐림 18°C</p>
           <p class="kpi-desc">배달 주문 증가 예상</p>
@@ -41,36 +41,83 @@
         <div class="kpi-card">
           <div class="kpi-header">
             <span>이번 주 평균</span>
-            <div class="icon green">📊</div>
+            <div class="kpi-icon green">📈</div>
           </div>
           <p class="kpi-value">945,000원</p>
           <p class="kpi-desc">일평균 매출액</p>
         </div>
       </div>
 
-      <!-- AI 인사이트 -->
-      <div class="ai-box">
+      <!-- AI 인사이트 박스 -->
+      <div class="ai-insight">
         <div class="ai-icon">✨</div>
-        <div>
+        <div class="ai-content">
           <h3>AI 인사이트</h3>
           <p>
             오늘 흐린 날씨로 인해 배달 주문이 평소보다 35% 증가했습니다. 홀
             손님은 감소했지만 전체 매출은 목표치를 초과 달성했습니다.
           </p>
           <div class="ai-tags">
-            <span>배달 증가</span>
-            <span>매출 목표 달성</span>
+            <span class="tag blue">배달 증가</span>
+            <span class="tag purple">매출 목표 달성</span>
           </div>
         </div>
       </div>
 
-      <!-- 주간 매출 트렌드 -->
-      <div class="trend-box">
-        <div class="trend-header">
-          <h3>주간 매출 트렌드</h3>
-          <button>상세보기 →</button>
+      <!-- 2열 레이아웃 -->
+      <div class="two-column">
+        <!-- 주간 매출 트렌드 -->
+        <div class="card">
+          <div class="card-header">
+            <h3>주간 매출 트렌드</h3>
+            <button class="card-btn">상세보기 →</button>
+          </div>
+          <div class="trend-list" id="salesTrend">
+            <!-- JS에서 렌더링 -->
+          </div>
         </div>
-        <div id="trendList"></div>
+
+        <!-- 재고 & 인력 현황 -->
+        <div class="card">
+          <div class="card-header">
+            <h3>재고 & 인력 현황</h3>
+            <button class="card-btn">관리하기 →</button>
+          </div>
+          <div class="status-list">
+            <div class="status-item green">
+              <div class="status-left">
+                <div class="status-icon">📦</div>
+                <div>
+                  <p class="status-title">주 재료</p>
+                  <p class="status-desc">양파, 대파, 고기류</p>
+                </div>
+              </div>
+              <span class="status-badge">충분</span>
+            </div>
+
+            <div class="status-item yellow">
+              <div class="status-left">
+                <div class="status-icon">📦</div>
+                <div>
+                  <p class="status-title">부 재료</p>
+                  <p class="status-desc">마늘, 생강, 고춧가루</p>
+                </div>
+              </div>
+              <span class="status-badge">보통</span>
+            </div>
+
+            <div class="status-item blue">
+              <div class="status-left">
+                <div class="status-icon">👥</div>
+                <div>
+                  <p class="status-title">근무 인력</p>
+                  <p class="status-desc">정직원 2명 + 알바 1명</p>
+                </div>
+              </div>
+              <span class="status-badge">적정</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <button
